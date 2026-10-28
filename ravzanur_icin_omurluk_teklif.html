@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b1d">
+<title>Ravzanur'a — Bir Ömürlük Soru 💗</title>
+<style>
+:root{--bg:#100813;--panel:#211126;--pink:#ff7eb6;--rose:#ff4f91;--cream:#fff0f6;--muted:#d7b9cb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#49203f 0%,#1b1022 42%,#0e0913 100%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+main{width:min(920px,92%);margin:auto;padding:30px 0 70px}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+.eyebrow{font:600 12px/1.5 system-ui,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#ffc2dc}
+h1{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1.02;margin:22px 0 20px;font-weight:normal;text-shadow:0 0 38px #ff4f9144}
+h1 em{color:#ff9cc7;font-style:normal}
+.lead{max-width:640px;font-size:clamp(1.05rem,2.8vw,1.3rem);line-height:1.9;color:#f4dce8}
+button.primary{border:0;border-radius:999px;background:linear-gradient(135deg,#ffb4d4,#ff4f91);color:#371025;padding:16px 26px;font-weight:bold;box-shadow:0 8px 35px #ff4f9144;transition:transform .25s,box-shadow .25s,font-size .25s,padding .25s}
+button.primary:hover{transform:translateY(-2px);box-shadow:0 12px 42px #ff4f9166}
+.scrollhint{margin-top:38px;color:#cba9bf;font:12px system-ui,sans-serif;letter-spacing:.12em}
+.section{margin:28px 0;padding:clamp(24px,5vw,48px);border:1px solid #ffb4d426;border-radius:26px;background:linear-gradient(145deg,#2c1730dd,#1b1124e8);box-shadow:0 18px 70px #0003}
+.section h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:normal;line-height:1.2;margin:0 0 22px;color:#ffb4d4}
+.section p{font-size:1.12rem;line-height:2;color:#f3dce8;margin:0 0 17px}
+.signature{color:#ffb4d4;font-style:italic;font-size:1.25rem!important}
+.divider{color:#ff8cbb;text-align:center;letter-spacing:.5em;margin:28px 0}
+.promise-list{display:grid;gap:12px;margin-top:22px}
+.promise{padding:16px 18px;border-radius:16px;background:#ffffff08;border:1px solid #ffffff0d;line-height:1.7;color:#f6dce9}
+.promise span{color:#ff8cbb;margin-right:10px}
+.proposal{text-align:center;padding:clamp(28px,6vw,60px) clamp(20px,4vw,36px)}
+.proposal h2{font-size:clamp(2.1rem,7vw,4.4rem);margin-bottom:20px}
+.proposal .question{font-size:clamp(1.1rem,3vw,1.35rem);line-height:1.9;max-width:650px;margin:0 auto 28px}
+.actions{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin:28px auto 8px;min-height:76px}
+#yesBtn{font-size:1.15rem;position:relative;z-index:2}
+#noBtn{border:1px solid #ffb4d455;border-radius:999px;padding:14px 23px;background:#ffffff09;color:#f8dce9;transition:transform .2s,opacity .2s}
+#response{min-height:48px;margin:20px auto 0;max-width:600px;color:#ffc2dc;line-height:1.8}
+footer{text-align:center;color:#c9a6bc;font:12px/1.8 system-ui,sans-serif;padding:26px 10px}
+#celebration{display:none;text-align:center;padding:40px 12px 12px;animation:fadeIn .8s ease both}
+#celebration.show{display:block}
+#celebration h2{font-size:clamp(2rem,7vw,4.2rem);color:#ff9cc7;font-weight:normal}
+#celebration p{font-size:1.15rem;line-height:2;color:#ffe6f1}
+.big-heart{font-family:system-ui,sans-serif;font-size:clamp(90px,20vw,160px);line-height:1.3;display:inline-block;animation:heartbeat 1s ease-in-out infinite;filter:drop-shadow(0 0 24px #ff4f91aa)}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}60%{transform:scale(1)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.floating-heart{position:fixed;bottom:-50px;pointer-events:none;z-index:20;animation:floatUp linear forwards;filter:drop-shadow(0 0 10px #ff4f91aa)}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0deg) scale(.65);opacity:0}10%{opacity:1}100%{transform:translateY(-115vh) rotate(28deg) scale(1.3);opacity:0}}
+@media(max-width:540px){main{width:91%;padding-top:14px}.section{border-radius:20px}.actions{gap:12px}#yesBtn,#noBtn{width:100%;max-width:300px}.hero{min-height:80vh}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="eyebrow">Kalbimden sana · Ravzanur'a</div>
+    <h1>Bir gün değil,<br><em>bir ömür</em> seninle…</h1>
+    <p class="lead">Ravzanur, bu sayfa birkaç güzel kelimeden ibaret değil. İçimde sana söylemek istediğim, bazen anlatmaya kelimelerin yetmediği duyguların küçük bir köşesi.</p>
+    <button class="primary" id="openLetter">Mektubumu aç 💌</button>
+    <div class="scrollhint">YAVAŞÇA AŞAĞI KAYDIR · HER SATIR SANA</div>
+  </header>
+
+  <section class="section" id="letter">
+    <div class="eyebrow">Sana söylemek istediklerim</div>
+    <h2>Ravzanur'um, güzel kalplim…</h2>
+    <p>Belki sana anlatacaklarımı tek bir mesaja sığdırabilirdim. Ama sen benim için sıradan bir mesajın içine sığdırılacak kadar sıradan değilsin. O yüzden bu kez acele etmeden, içimden geldiği gibi yazmak istedim.</p>
+    <p>Hayatıma gelişini düşündüğümde, insanın bazen hiç beklemediği bir anda birini tanıyıp ona karşı bambaşka duygular besleyebildiğini anlıyorum. Seninle konuşmak, günümün içinde senden gelecek bir haberi beklemek, sana anlatacağım küçücük şeyleri bile içimde biriktirmek… Bunların hepsi benim için ayrı bir güzellik taşıyor.</p>
+    <p>Ben senden kusursuz olmanı istemiyorum, Ravzanur. Her günümüzün masal gibi geçmesini de beklemiyorum. Bazen yorulabiliriz, bazen birbirimizi yanlış anlayabiliriz, bazen kelimelerimiz duygularımızı anlatmaya yetmeyebilir. Ama ben, bir sorun çıktığında birbirimize sırt çevirmek yerine konuşmayı; kırıldığımızda susup uzaklaşmak yerine birbirimizi anlamaya çalışmayı isterim.</p>
+    <p>Çünkü benim için sevgi yalnızca güzel sözler söylemek değil. Sevgi; güven vermek, verdiği sözü önemsemek, karşısındakinin kalbini incitmemeye özen göstermek ve zor günlerde de saygıyı kaybetmemektir. Sana verebileceğim en güzel söz, hiç hata yapmayacağım değil; hata yaptığımda dinlemeye, anlamaya ve düzeltmeye çalışacağımdır.</p>
+    <div class="divider">✦ ♥ ✦</div>
+    <p>Bir gün geleceğe dönüp baktığımızda, bugünümüzü güzel bir başlangıç olarak hatırlamayı isterim. Birlikte güldüğümüz, birbirimize destek olduğumuz, hayallerimizi anlattığımız ve küçük şeylerden mutluluk çıkardığımız günlerimiz olsun. Mesafeler ya da zor zamanlar önümüze çıkarsa, onları birbirimize karşı değil, yan yana durarak aşmayı deneyelim.</p>
+    <p>Ravzanur, senin gülümsemeni istemek kadar, kendini güvende, değerli ve olduğun gibi kabul edilmiş hissetmeni de isterim. Kendi hayallerin, hedeflerin ve sana ait bir dünyan olsun; ben de o dünyaya saygı duyan, seni destekleyen ve seninle birlikte büyümeyi öğrenen biri olayım.</p>
+    <p>Bugün sana sonsuzluğu garanti edemem; çünkü hayatın bize neler getireceğini kimse bilemez. Ama sana içten bir niyet sunabilirim: Eğer sen de istersen, bu hikâyeyi dürüstlükle, sabırla, sadakatle ve emek vererek büyütmek istiyorum. Güzel günlerde sevinci paylaşmak, zor günlerde birbirimizi dinlemek ve her yeni günde sevgimizi davranışlarımızla göstermeyi öğrenmek istiyorum.</p>
+    <p class="signature">Kısacası Ravzanur… Ben yalnızca bugünümü değil, yarınlarımı da seninle paylaşma ihtimalini çok güzel buluyorum. 💗</p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Kalbimden bir söz</div>
+    <h2>Sana nasıl davranmak istiyorum?</h2>
+    <div class="promise-list">
+      <div class="promise"><span>♡</span> Seni dikkatle dinlemek ve hislerini küçümsememek.</div>
+      <div class="promise"><span>♡</span> Güvenini sözlerle değil, davranışlarımla kazanmak.</div>
+      <div class="promise"><span>♡</span> Bir anlaşmazlıkta haklı çıkmaya değil, birbirimizi anlamaya çalışmak.</div>
+      <div class="promise"><span>♡</span> Hayallerine, sınırlarına ve kendi olma hakkına saygı duymak.</div>
+      <div class="promise"><span>♡</span> Güzel anlarımızı çoğaltmak ve sevgimizi her gün küçük şeylerle göstermek.</div>
+    </div>
+  </section>
+
+  <section class="section proposal" id="proposal">
+    <div class="eyebrow">Şimdi en önemli sorum</div>
+    <h2>Ravzanur… 💗</h2>
+    <p class="question">Bunca kelimenin arasında aslında tek bir şey söylemek istiyorum: Seninle özel, güzel ve gerçek bir hikâye kurmayı istiyorum. El ele verip birbirimizi tanımaya, birlikte gülmeye, birbirimize güvenmeyi öğrenmeye ve bu sevgiyi emekle büyütmeye var mısın?</p>
+    <p class="question"><strong>Ravzanur, benim sevgilim olur musun?</strong></p>
+    <div class="actions">
+      <button class="primary" id="yesBtn">Evet, olurum 💖</button>
+      <button id="noBtn">Biraz düşüneyim</button>
+    </div>
+    <div id="response" aria-live="polite"></div>
+    <div id="celebration">
+      <div class="big-heart" aria-label="Kalp">💗</div>
+      <h2>O zaman bu güzel başlangıç bizim! 💞</h2>
+      <p><strong>Ravzanur'um, bu “evet” benim için çok kıymetli.</strong></p>
+      <p>Bugünden sonra sana vereceğim en güzel hediye, yalnızca romantik sözler değil; yanında kendin gibi olabildiğin, sesinin duyulduğu, sevginin ve saygının eksik olmadığı bir ilişki için emek vermek olsun.</p>
+      <p>Her günümüz mükemmel olmak zorunda değil. Yeter ki birbirimizi dinlemeyi, birbirimize dürüst olmayı ve güzel şeyleri birlikte büyütmeyi unutmayalım. Bugün attığımız bu küçük adım, yarın dönüp gülümsediğimiz bir anı olsun.</p>
+      <p>Ve yıllar sonra bu sayfayı yeniden görürsek, içimizden şöyle diyelim: “İyi ki o gün birbirimize bir şans vermişiz; iyi ki birlikte büyümeyi seçmişiz.”</p>
+      <p class="signature">Sana, kalbimin en güzel dilekleriyle…<br>Birlikte yazacağımız nice güzel yarınlara. ♾️💗</p>
+    </div>
+  </section>
+  <footer>Bu sayfa Ravzanur için, kalpten gelen bir teklif olarak hazırlandı. ♡<br>En güzel hikâyeler; sevgi, saygı ve emekle yazılır.</footer>
+</main>
+<script>
+const openLetter=document.getElementById('openLetter');
+openLetter.addEventListener('click',()=>document.getElementById('letter').scrollIntoView({behavior:'smooth'}));
+const noBtn=document.getElementById('noBtn');
+const yesBtn=document.getElementById('yesBtn');
+const response=document.getElementById('response');
+let yesScale=1,noCount=0,accepted=false;
+noBtn.addEventListener('click',()=>{
+  if(accepted)return;
+  noCount++;
+  yesScale=Math.min(yesScale+0.28,2.6);
+  yesBtn.style.transform=`scale(${yesScale})`;
+  yesBtn.style.fontSize=`${1.15+(yesScale-1)*0.42}rem`;
+  yesBtn.style.padding=`${16+(yesScale-1)*10}px ${26+(yesScale-1)*12}px`;
+  const messages=[
+    'Acele etme, Ravzanur. Kalbinin hazır hissetmesi önemli. 💗',
+    'Evet butonu biraz büyüdü; çünkü sana söyleyecek güzel sözlerim hâlâ çok. 😊',
+    'Karar senin, güzel kalplim. Hazır olduğunda cevabını seçebilirsin. 💞',
+    'Bu küçük buton artık kocaman oldu! Yine de seçim tamamen senin. ♡'
+  ];
+  response.textContent=messages[Math.min(noCount-1,messages.length-1)];
+  if(yesScale>=2.4){noBtn.textContent='Biraz daha düşüneyim';}
+});
+function launchHearts(){
+  const symbols=['💗','💖','💕','💘','❤️','♡','✨'];
+  for(let i=0;i<46;i++){
+    const heart=document.createElement('div');
+    heart.className='floating-heart';
+    heart.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(18+Math.random()*30)+'px';
+    heart.style.animationDuration=(3+Math.random()*4)+'s';
+    heart.style.animationDelay=(Math.random()*1.2)+'s';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),8500);
+  }
+}
+yesBtn.addEventListener('click',()=>{
+  if(accepted)return;
+  accepted=true;
+  response.textContent='';
+  noBtn.disabled=true;
+  noBtn.style.opacity='.45';
+  yesBtn.textContent='Birlikte nice güzel yarınlara 💗';
+  document.getElementById('celebration').classList.add('show');
+  launchHearts();
+  setTimeout(()=>document.getElementById('celebration').scrollIntoView({behavior:'smooth',block:'center'}),250);
+});
+</script>
+</body>
+</html>
